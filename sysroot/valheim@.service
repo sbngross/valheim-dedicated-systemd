@@ -1,0 +1,10 @@
+[Unit]
+Description="Valheim Server for %I"
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+User=steam
+Environment=LD_LIBRARY_PATH=/home/steam/valheim/linux64:$LD_LIBRARY_PATH
+ExecStart=/etc/valheim/start_server.sh %I
+KillSignal=SIGINT
